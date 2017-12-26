@@ -14,7 +14,7 @@
 
 + (CGFloat)defaultHeight;
 
-@property (nonatomic, strong) UIImage *image;                                   // 图片
+@property (nonatomic, strong) UIImage *image;                                   // 图片(如果传空，则不忽略图片显示)
 @property (nonatomic, copy) NSString *text;                                     // 文字
 @property (nonatomic, strong) UIFont *textFont;                                 // 文字字体(默认：系统14)
 @property (nonatomic, strong) UIColor *textColor;                               // 文字颜色(默认：grayColor)

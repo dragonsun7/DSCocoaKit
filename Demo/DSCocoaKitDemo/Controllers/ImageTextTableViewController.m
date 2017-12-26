@@ -37,7 +37,7 @@ NSString *kImageTextCellReuseIdentifier = @"ImageTextCell";
     DSImageLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:kImageTextCellReuseIdentifier forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.separatorInsetStyle = indexPath.row % 3;
-    cell.image = [UIImage imageNamed:@"CellIcon"];
+    cell.image = (indexPath.row / 3 % 2) ? [UIImage imageNamed:@"CellIcon"] : nil;
     cell.text = @"用户信息";
     
     return cell;

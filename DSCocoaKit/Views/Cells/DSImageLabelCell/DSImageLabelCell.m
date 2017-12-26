@@ -53,7 +53,7 @@
     
     // 设置标识框的大小与位置(始终保持垂直居中)
     [_label sizeToFit];
-    CGFloat labelLeft = _imageLeftSpacing + imageWidth + _textLeftSpacing;
+    CGFloat labelLeft = _imageLeftSpacing + imageWidth + (_image ? _textLeftSpacing : 0.0);
     CGFloat labelWidth = _label.bounds.size.width;
     CGFloat labelHeight = _label.bounds.size.height;
     _label.frame = CGRectMake(labelLeft, (cellHeight - labelHeight) / 2, labelWidth, labelHeight);

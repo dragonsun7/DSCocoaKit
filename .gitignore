@@ -1,5 +1,6 @@
 
 .DS_Store
-Demo/DSCocoaKitDemo.xcodeproj/project.xcworkspace/contents.xcworkspacedata
-Demo/DSCocoaKitDemo.xcodeproj/project.xcworkspace/xcuserdata/ds.xcuserdatad/UserInterfaceState.xcuserstate
-Demo/DSCocoaKitDemo.xcodeproj/xcuserdata/ds.xcuserdatad/xcschemes/xcschememanagement.plist
+Pods/
+Podfile.lock
+xcuserdata/
+project.xcworkspace/

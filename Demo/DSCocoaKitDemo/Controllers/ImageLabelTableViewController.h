@@ -1,5 +1,5 @@
 //
-//  ImageTextTableViewController.h
+//  ImageLabelTableViewController.h
 //  DSCocoaKitDemo
 //
 //  Created by Dragon Sun on 2017/12/26.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImageTextTableViewController : UITableViewController
+@interface ImageLabelTableViewController : UITableViewController
 
 @end

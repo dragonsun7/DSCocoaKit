@@ -36,14 +36,14 @@
 @property (nonatomic, strong) UIColor *textColor;
 
 /**
- 图片距离单元格左边框的距离，默认为15.0
- 当图片为 nil 时，该距离依然生效
+ 图片距离单元格左边框的间隔，默认为15.0
+ 当图片为 nil 时，该间隔依然生效
  */
 @property (nonatomic, assign) CGFloat imageLeftSpacing;
 
 /**
- 文字起始位置与图片右边界的距离，默认为8.0
- 当图片为 nil 时，该距离失效
+ 文字起始位置与图片右边界的间隔，默认为8.0
+ 当图片为 nil 时，该间隔失效
  */
 @property (nonatomic, assign) CGFloat textLeftSpacing;
 

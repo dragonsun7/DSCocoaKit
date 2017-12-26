@@ -1,0 +1,6 @@
+platform :ios, '10.0'
+inhibit_all_warnings!   # 忽略所有pod中的警告
+
+target "DSCocoaKitDemo" do
+    pod 'FLEX', '~> 2.0', :configurations => ['Debug']
+end

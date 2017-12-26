@@ -35,7 +35,7 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        [self initialize];
+        [self imageLabelCellInitialize];
     }
     
     return self;
@@ -89,19 +89,19 @@
 
 - (void)setImage:(UIImage *)image {
     _image = image;
-    self.imageView.image = image;
+    _imageView.image = image;
     [self layoutIfNeeded];
 }
 
 - (void)setText:(NSString *)text {
     _text = text;
-    self.textLabel.text = text;
+    _textLabel.text = text;
     [self layoutIfNeeded];
 }
 
 - (void)setTextFont:(UIFont *)textFont {
     _textFont = textFont;
-    self.textLabel.font = textFont;
+    _textLabel.font = textFont;
     [self layoutIfNeeded];
 }
 
@@ -128,17 +128,17 @@
 
 #pragma mark - Private
 
-- (void)initialize {
+- (void)imageLabelCellInitialize {
+    [self.contentView addSubview:self.imageView];
+    [self.contentView addSubview:self.textLabel];
+
     _defaultLeftSeparatorInset = self.separatorInset.left;
 
-    self.textFont = [UIFont systemFontOfSize:14.0f];
+    self.textFont = [UIFont systemFontOfSize:14.0];
     self.textColor = [UIColor grayColor];
     self.imageLeftSpacing = 15.0;
     self.textLeftSpacing = 8.0;
     self.separatorInsetStyle = DSCellSeparatorInsetStyleDefault;
-    
-    [self.contentView addSubview:self.imageView];
-    [self.contentView addSubview:self.textLabel];
 }
 
 @end

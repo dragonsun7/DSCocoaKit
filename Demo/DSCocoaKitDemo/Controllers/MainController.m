@@ -7,7 +7,9 @@
 //
 
 #import "MainController.h"
-#import "ImageTextTableViewController.h"
+#import <FLEX/FLEX.h>
+#import "ImageLabelTableViewController.h"
+#import "DetailLabelTableViewController.h"
 
 
 @interface MainController () {
@@ -29,6 +31,7 @@ NSString *kMainCellReuseIdentifier = @"cell";
 
     _categories = [self categoryList];
     self.navigationItem.title = @"分类";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"FLEX" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonAction:)];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kMainCellReuseIdentifier];
     self.tableView.tableFooterView = [UIView new];
@@ -56,9 +59,27 @@ NSString *kMainCellReuseIdentifier = @"cell";
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    ImageTextTableViewController *vc = [[ImageTextTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    UITableViewController *vc = nil;
+    switch (indexPath.row) {
+        case 0:
+            vc = [[ImageLabelTableViewController alloc] initWithStyle:UITableViewStylePlain];
+            break;
+        case 1:
+            vc = [[DetailLabelTableViewController alloc] initWithStyle:UITableViewStylePlain];
+            break;
+        default:
+            break;
+    }
+    
     vc.title = _categories[indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+
+#pragma mark - Action
+
+- (IBAction)rightBarButtonAction:(id)sender {
+    [[FLEXManager sharedManager] showExplorer];
 }
 
 
@@ -66,7 +87,8 @@ NSString *kMainCellReuseIdentifier = @"cell";
 
 - (NSArray<NSString *> *)categoryList {
     return @[
-             @"ImageLabelCell"
+             @"ImageLabelCell",
+             @"DetailLabelCell"
              ];
 }
 

@@ -8,4 +8,4 @@
 #import <UIKit/UIKit.h>
 
 #import "DSCell.h"
-#import "DSImageTextCell.h"
+#import "DSImageLabelCell.h"

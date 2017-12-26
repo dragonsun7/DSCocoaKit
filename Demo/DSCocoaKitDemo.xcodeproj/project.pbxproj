@@ -11,7 +11,7 @@
 		412F20B61FF262EA004953E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 412F20B51FF262EA004953E9 /* Assets.xcassets */; };
 		412F20B91FF262EA004953E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 412F20B71FF262EA004953E9 /* LaunchScreen.storyboard */; };
 		412F20BC1FF262EA004953E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 412F20BB1FF262EA004953E9 /* main.m */; };
-		41EF3C721FF263320061832A /* DSImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EF3C711FF263320061832A /* DSImageTextCell.m */; };
+		41EF3C721FF263320061832A /* DSImageLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EF3C711FF263320061832A /* DSImageLabelCell.m */; };
 		41EF3C7A1FF263640061832A /* ImageTextTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EF3C751FF263640061832A /* ImageTextTableViewController.m */; };
 		41EF3C7B1FF263640061832A /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EF3C771FF263640061832A /* MainController.m */; };
 		41EF3C7C1FF263640061832A /* CellIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41EF3C791FF263640061832A /* CellIcon@2x.png */; };
@@ -27,8 +27,8 @@
 		412F20BB1FF262EA004953E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		41EF3C6B1FF263320061832A /* DSCocoaKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCocoaKit.h; sourceTree = "<group>"; };
 		41EF3C6E1FF263320061832A /* DSCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCell.h; sourceTree = "<group>"; };
-		41EF3C701FF263320061832A /* DSImageTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSImageTextCell.h; sourceTree = "<group>"; };
-		41EF3C711FF263320061832A /* DSImageTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSImageTextCell.m; sourceTree = "<group>"; };
+		41EF3C701FF263320061832A /* DSImageLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSImageLabelCell.h; sourceTree = "<group>"; };
+		41EF3C711FF263320061832A /* DSImageLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSImageLabelCell.m; sourceTree = "<group>"; };
 		41EF3C741FF263640061832A /* ImageTextTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTextTableViewController.h; sourceTree = "<group>"; };
 		41EF3C751FF263640061832A /* ImageTextTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTextTableViewController.m; sourceTree = "<group>"; };
 		41EF3C761FF263640061832A /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
@@ -101,18 +101,18 @@
 			isa = PBXGroup;
 			children = (
 				41EF3C6E1FF263320061832A /* DSCell.h */,
-				41EF3C6F1FF263320061832A /* DSImageTextCell */,
+				41EF3C6F1FF263320061832A /* DSImageLabelCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		41EF3C6F1FF263320061832A /* DSImageTextCell */ = {
+		41EF3C6F1FF263320061832A /* DSImageLabelCell */ = {
 			isa = PBXGroup;
 			children = (
-				41EF3C701FF263320061832A /* DSImageTextCell.h */,
-				41EF3C711FF263320061832A /* DSImageTextCell.m */,
+				41EF3C701FF263320061832A /* DSImageLabelCell.h */,
+				41EF3C711FF263320061832A /* DSImageLabelCell.m */,
 			);
-			path = DSImageTextCell;
+			path = DSImageLabelCell;
 			sourceTree = "<group>";
 		};
 		41EF3C731FF263640061832A /* Controllers */ = {
@@ -209,7 +209,7 @@
 				412F20BC1FF262EA004953E9 /* main.m in Sources */,
 				412F20AE1FF262EA004953E9 /* AppDelegate.m in Sources */,
 				41EF3C7B1FF263640061832A /* MainController.m in Sources */,
-				41EF3C721FF263320061832A /* DSImageTextCell.m in Sources */,
+				41EF3C721FF263320061832A /* DSImageLabelCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

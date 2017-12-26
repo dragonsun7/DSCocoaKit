@@ -1,14 +1,14 @@
 //
-//  DSImageTextCell.m
+//  DSImageLabelCell.m
 //
 //  Created by Dragon Sun on 2017/12/25.
 //  Copyright © 2017 Dragon Sun. All rights reserved.
 //
 
-#import "DSImageTextCell.h"
+#import "DSImageLabelCell.h"
 
 
-@interface DSImageTextCell () {
+@interface DSImageLabelCell () {
     CGFloat _defaultLeftSeparatorInset;
 }
 
@@ -18,7 +18,7 @@
 @end
 
 
-@implementation DSImageTextCell
+@implementation DSImageLabelCell
 
 @synthesize imageView = _imageView;
 @synthesize label = _label;

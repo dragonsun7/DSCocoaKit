@@ -66,7 +66,7 @@ NSString *kMainCellReuseIdentifier = @"cell";
 
 - (NSArray<NSString *> *)categoryList {
     return @[
-             @"ImageTextCell"
+             @"ImageLabelCell"
              ];
 }
 

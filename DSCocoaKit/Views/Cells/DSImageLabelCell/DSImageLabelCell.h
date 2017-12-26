@@ -1,5 +1,5 @@
 //
-//  DSImageTextCell.h
+//  DSImageLabelCell.h
 //
 //  Created by Dragon Sun on 2017/12/25.
 //  Copyright © 2017 Dragon Sun. All rights reserved.
@@ -10,7 +10,7 @@
 /**
  包含了一个图片框和一个标识框的Cell
  */
-@interface DSImageTextCell : UITableViewCell
+@interface DSImageLabelCell : UITableViewCell
 
 + (CGFloat)defaultHeight;
 

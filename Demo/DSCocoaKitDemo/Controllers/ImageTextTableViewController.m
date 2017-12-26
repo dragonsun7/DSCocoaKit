@@ -20,7 +20,7 @@ NSString *kImageTextCellReuseIdentifier = @"ImageTextCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView registerClass:[DSImageTextCell class] forCellReuseIdentifier:kImageTextCellReuseIdentifier];
+    [self.tableView registerClass:[DSImageLabelCell class] forCellReuseIdentifier:kImageTextCellReuseIdentifier];
     self.tableView.tableFooterView = [UIView new];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -34,7 +34,7 @@ NSString *kImageTextCellReuseIdentifier = @"ImageTextCell";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    DSImageTextCell *cell = [tableView dequeueReusableCellWithIdentifier:kImageTextCellReuseIdentifier forIndexPath:indexPath];
+    DSImageLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:kImageTextCellReuseIdentifier forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.separatorInsetStyle = indexPath.row % 3;
     cell.image = [UIImage imageNamed:@"CellIcon"];
@@ -47,7 +47,7 @@ NSString *kImageTextCellReuseIdentifier = @"ImageTextCell";
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [DSImageTextCell defaultHeight];
+    return [DSImageLabelCell defaultHeight];
 }
 
 @end

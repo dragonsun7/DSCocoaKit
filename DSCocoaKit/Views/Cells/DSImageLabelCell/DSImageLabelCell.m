@@ -13,7 +13,7 @@
 }
 
 @property (nonatomic, readonly) UIImageView *imageView;
-@property (nonatomic, readonly) UILabel *label;
+@property (nonatomic, readonly) UILabel *textLabel;
 
 @end
 
@@ -21,7 +21,7 @@
 @implementation DSImageLabelCell
 
 @synthesize imageView = _imageView;
-@synthesize label = _label;
+@synthesize textLabel = _textLabel;
 
 
 #pragma mark - API
@@ -52,11 +52,11 @@
     _imageView.frame = CGRectMake(_imageLeftSpacing, (cellHeight - imageHeight) / 2, imageWidth, imageHeight);
     
     // 设置标识框的大小与位置(始终保持垂直居中)
-    [_label sizeToFit];
+    [_textLabel sizeToFit];
     CGFloat labelLeft = _imageLeftSpacing + imageWidth + (_image ? _textLeftSpacing : 0.0);
-    CGFloat labelWidth = _label.bounds.size.width;
-    CGFloat labelHeight = _label.bounds.size.height;
-    _label.frame = CGRectMake(labelLeft, (cellHeight - labelHeight) / 2, labelWidth, labelHeight);
+    CGFloat labelWidth = _textLabel.bounds.size.width;
+    CGFloat labelHeight = _textLabel.bounds.size.height;
+    _textLabel.frame = CGRectMake(labelLeft, (cellHeight - labelHeight) / 2, labelWidth, labelHeight);
 
     // 分割线样式
     CGFloat insetLeft = _defaultLeftSeparatorInset;
@@ -76,12 +76,12 @@
     return _imageView;
 }
 
-- (UILabel *)label {
-    if (!_label) {
-        _label = [UILabel new];
+- (UILabel *)textLabel {
+    if (!_textLabel) {
+        _textLabel = [UILabel new];
     }
     
-    return _label;
+    return _textLabel;
 }
 
 
@@ -95,19 +95,19 @@
 
 - (void)setText:(NSString *)text {
     _text = text;
-    self.label.text = text;
+    self.textLabel.text = text;
     [self layoutIfNeeded];
 }
 
 - (void)setTextFont:(UIFont *)textFont {
     _textFont = textFont;
-    self.label.font = textFont;
+    self.textLabel.font = textFont;
     [self layoutIfNeeded];
 }
 
 - (void)setTextColor:(UIColor *)textColor {
     _textColor = textColor;
-    self.label.textColor = textColor;
+    self.textLabel.textColor = textColor;
 }
 
 - (void)setImageLeftSpacing:(CGFloat)imageLeftSpacing {
@@ -138,7 +138,7 @@
     self.separatorInsetStyle = DSCellSeparatorInsetStyleDefault;
     
     [self.contentView addSubview:self.imageView];
-    [self.contentView addSubview:self.label];
+    [self.contentView addSubview:self.textLabel];
 }
 
 @end

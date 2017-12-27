@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 s.name = 'DSCocoaKit'
 s.summary = 'A collection of iOS components.'
-s.version = '0.0.1'
+s.version = '0.0.2'
 s.license = { :type => 'MIT', :file => 'LICENSE' }
 s.authors = { '滚龙' => 'dragonsun7@163.com' }
 s.homepage = 'https://github.com/dragonsun7/DSCocoaKit'

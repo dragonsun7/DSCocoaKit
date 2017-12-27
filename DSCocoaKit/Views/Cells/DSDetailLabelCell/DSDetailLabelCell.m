@@ -20,26 +20,34 @@
 @synthesize detailLabel = _detailLabel;
 
 
-#pragma mark - LifeCycle
+#pragma mark - override
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        [self detailLabelCellInitialize];
-    }
+- (void)initialize {
+    [super initialize];
     
-    return self;
+    [self.contentView addSubview:self.detailLabel];
+    
+    self.detailFont = [UIFont systemFontOfSize:14.0];
+    self.detailColor = [UIColor lightGrayColor];
+    self.detailRightSpacing = 6.0;
 }
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
+- (void)layout {
+    [super layout];
     
     // 设置detailLabel的大小与位置(始终保持垂直居中)
     [_detailLabel sizeToFit];
+    
+    CGFloat spacing = _detailRightSpacing;
+    if (self.accessoryType != UITableViewCellAccessoryNone || self.accessoryView) {
+        spacing = 0.0;
+    }
+    
     CGFloat cellWidth = self.contentView.bounds.size.width;
     CGFloat cellHeight = self.contentView.bounds.size.height;
     CGFloat labelWidth = _detailLabel.bounds.size.width;
     CGFloat labelHeight = _detailLabel.bounds.size.height;
-    CGFloat labelLeft = cellWidth - labelWidth - _detailRightSpacing;
+    CGFloat labelLeft = cellWidth - labelWidth - spacing;
     CGFloat labelTop = (cellHeight - labelHeight) / 2;
     _detailLabel.frame = CGRectMake(labelLeft, labelTop, labelWidth, labelHeight);
 }
@@ -78,17 +86,6 @@
 - (void)setDetailRightSpacing:(CGFloat)detailRightSpacing {
     _detailRightSpacing = detailRightSpacing;
     [self layoutIfNeeded];
-}
-
-
-#pragma mark - Private
-
-- (void)detailLabelCellInitialize {
-    [self.contentView addSubview:self.detailLabel];
-
-    self.detailFont = [UIFont systemFontOfSize:14.0];
-    self.detailColor = [UIColor lightGrayColor];
-    self.detailRightSpacing = 6.0;
 }
 
 @end

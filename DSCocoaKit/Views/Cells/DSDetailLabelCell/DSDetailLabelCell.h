@@ -29,7 +29,7 @@
 
 /**
  明细文字距离单元格右边框的间隔，默认为6.0
- 如果单元格有附件视图，则为距离附件视图起始位置的间隔
+ 如果单元格有附件视图，则忽略该距离
  */
 @property (nonatomic, assign) CGFloat detailRightSpacing;
 

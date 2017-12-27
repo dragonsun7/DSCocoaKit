@@ -5,14 +5,12 @@
 //  Copyright © 2017 Dragon Sun. All rights reserved.
 //
 
-#import "DSCell.h"
+#import "DSBaseCell.h"
 
 /**
  包含了一个图片框和一个标识框的Cell
  */
-@interface DSImageLabelCell : UITableViewCell
-
-+ (CGFloat)defaultHeight;
+@interface DSImageLabelCell : DSBaseCell
 
 /**
  要显示的图片，单元格内垂直居中
@@ -46,11 +44,5 @@
  当图片为 nil 时，该间隔失效
  */
 @property (nonatomic, assign) CGFloat textLeftSpacing;
-
-/**
- 单元格分割线的样式，默认为 DSCellSeparatorInsetStyleDefault
- 详情请参看 DSCellSeparatorInsetStyle 枚举的说明
- */
-@property (nonatomic, assign) DSCellSeparatorInsetStyle separatorInsetStyle;
 
 @end

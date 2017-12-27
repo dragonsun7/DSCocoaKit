@@ -8,9 +8,7 @@
 #import "DSImageLabelCell.h"
 
 
-@interface DSImageLabelCell () {
-    CGFloat _defaultLeftSeparatorInset;
-}
+@interface DSImageLabelCell ()
 
 @property (nonatomic, readonly) UIImageView *imageView;
 @property (nonatomic, readonly) UILabel *textLabel;
@@ -24,25 +22,22 @@
 @synthesize textLabel = _textLabel;
 
 
-#pragma mark - API
+#pragma mark - override
 
-+ (CGFloat)defaultHeight {
-    return 44.0f;
-}
-
-
-#pragma mark - LifeCycle
-
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        [self imageLabelCellInitialize];
-    }
+- (void)initialize {
+    [super initialize];
     
-    return self;
+    [self.contentView addSubview:self.imageView];
+    [self.contentView addSubview:self.textLabel];
+    
+    self.textFont = [UIFont systemFontOfSize:14.0];
+    self.textColor = [UIColor grayColor];
+    self.imageLeftSpacing = 15.0;
+    self.textLeftSpacing = 8.0;
 }
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
+- (void)layout {
+    [super layout];
     
     CGFloat cellHeight = self.contentView.bounds.size.height;
     
@@ -57,12 +52,10 @@
     CGFloat labelWidth = _textLabel.bounds.size.width;
     CGFloat labelHeight = _textLabel.bounds.size.height;
     _textLabel.frame = CGRectMake(labelLeft, (cellHeight - labelHeight) / 2, labelWidth, labelHeight);
+}
 
-    // 分割线样式
-    CGFloat insetLeft = _defaultLeftSeparatorInset;
-    if (DSCellSeparatorInsetStyleZero == _separatorInsetStyle) insetLeft = 0.0;
-    if (DSCellSeparatorInsetStyleAlignContent == _separatorInsetStyle) insetLeft = labelLeft;
-    self.separatorInset = UIEdgeInsetsMake(0.0, insetLeft, 0.0, 0.0);
+- (CGFloat)separatorAlignContentLeftInset {
+    return _textLabel.frame.origin.x;
 }
 
 
@@ -118,27 +111,6 @@
 - (void)setTextLeftSpacing:(CGFloat)textLeftSpacing {
     _textLeftSpacing = textLeftSpacing;
     [self layoutIfNeeded];
-}
-
-- (void)setSeparatorInsetStyle:(DSCellSeparatorInsetStyle)separatorStyle {
-    _separatorInsetStyle = separatorStyle;
-    [self layoutIfNeeded];
-}
-
-
-#pragma mark - Private
-
-- (void)imageLabelCellInitialize {
-    [self.contentView addSubview:self.imageView];
-    [self.contentView addSubview:self.textLabel];
-
-    _defaultLeftSeparatorInset = self.separatorInset.left;
-
-    self.textFont = [UIFont systemFontOfSize:14.0];
-    self.textColor = [UIColor grayColor];
-    self.imageLeftSpacing = 15.0;
-    self.textLeftSpacing = 8.0;
-    self.separatorInsetStyle = DSCellSeparatorInsetStyleDefault;
 }
 
 @end

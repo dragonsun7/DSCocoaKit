@@ -7,6 +7,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "DSCell.h"
+#import "DSBaseCell.h"
 #import "DSImageLabelCell.h"
 #import "DSDetailLabelCell.h"

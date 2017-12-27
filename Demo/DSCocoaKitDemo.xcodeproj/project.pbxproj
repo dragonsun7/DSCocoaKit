@@ -11,6 +11,7 @@
 		412F20B61FF262EA004953E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 412F20B51FF262EA004953E9 /* Assets.xcassets */; };
 		412F20B91FF262EA004953E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 412F20B71FF262EA004953E9 /* LaunchScreen.storyboard */; };
 		412F20BC1FF262EA004953E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 412F20BB1FF262EA004953E9 /* main.m */; };
+		4156D8401FF340D60021BEF5 /* DSBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4156D83F1FF340D60021BEF5 /* DSBaseCell.m */; };
 		41EF3C721FF263320061832A /* DSImageLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EF3C711FF263320061832A /* DSImageLabelCell.m */; };
 		41EF3C7A1FF263640061832A /* ImageLabelTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EF3C751FF263640061832A /* ImageLabelTableViewController.m */; };
 		41EF3C7B1FF263640061832A /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EF3C771FF263640061832A /* MainController.m */; };
@@ -31,8 +32,9 @@
 		412F20B81FF262EA004953E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		412F20BA1FF262EA004953E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		412F20BB1FF262EA004953E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4156D83E1FF340D60021BEF5 /* DSBaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSBaseCell.h; sourceTree = "<group>"; };
+		4156D83F1FF340D60021BEF5 /* DSBaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSBaseCell.m; sourceTree = "<group>"; };
 		41EF3C6B1FF263320061832A /* DSCocoaKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCocoaKit.h; sourceTree = "<group>"; };
-		41EF3C6E1FF263320061832A /* DSCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCell.h; sourceTree = "<group>"; };
 		41EF3C701FF263320061832A /* DSImageLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSImageLabelCell.h; sourceTree = "<group>"; };
 		41EF3C711FF263320061832A /* DSImageLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSImageLabelCell.m; sourceTree = "<group>"; };
 		41EF3C741FF263640061832A /* ImageLabelTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLabelTableViewController.h; sourceTree = "<group>"; };
@@ -116,7 +118,8 @@
 		41EF3C6D1FF263320061832A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				41EF3C6E1FF263320061832A /* DSCell.h */,
+				4156D83E1FF340D60021BEF5 /* DSBaseCell.h */,
+				4156D83F1FF340D60021BEF5 /* DSBaseCell.m */,
 				41EF3C6F1FF263320061832A /* DSImageLabelCell */,
 				41EF3C7F1FF293FC0061832A /* DSDetailLabelCell */,
 			);
@@ -306,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41EF3C821FF2941C0061832A /* DSDetailLabelCell.m in Sources */,
+				4156D8401FF340D60021BEF5 /* DSBaseCell.m in Sources */,
 				41EF3C7A1FF263640061832A /* ImageLabelTableViewController.m in Sources */,
 				412F20BC1FF262EA004953E9 /* main.m in Sources */,
 				412F20AE1FF262EA004953E9 /* AppDelegate.m in Sources */,
